@@ -1,0 +1,27 @@
+.responsive-text{
+    font-size: 18px;
+}
+
+@media screen and (min-width: 640px) {
+    .responsive-text{
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .responsive-text{
+        font-size: 48px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .notice{
+        display: none;
+    }
+}
+
+@media print {
+    h1{
+        text-decoration: underline;
+    }
+}
