@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="transition-all font-body dark:bg-gray-900">
+    <button id="change-font">Đổi font</button>
+    <button id="dark-mode" class="dark:text-white">Sáng / tối</button>
+    <div class="container mt-4 md:mt-96">
+        <div class="grid gap-4 px-12 py-10 text-white md:grid-cols-2 bg-primary dark:bg-white dark:text-primary rounded-example">
+            <div>
+                <h3 class="font-bold text-h3 lg:text-h2">Headline</h3>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.
+                </div>
+            </div>
+            <div class="relative flex justify-center md:block">
+                <div class="transform md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-1/2 md:left-1/2">
+                    <img src="./images/Feature/Single/Mobile/iPhone X.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var button = document.getElementById('change-font');
+        var buttonMode = document.getElementById('dark-mode');
+
+        button.addEventListener('click', function(){
+            var body = document.getElementsByTagName('body')[0];
+            body.classList.toggle('font-body');
+            body.classList.toggle('font-body-2');
+        });
+
+        buttonMode.addEventListener('click', function(){
+            var html = document.getElementsByTagName('html')[0];
+            html.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
